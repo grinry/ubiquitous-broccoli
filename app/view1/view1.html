@@ -1,0 +1,36 @@
+<input type="search" ng-model="search" placeholder="Search" />
+
+<table>
+    <thead>
+    <tr>
+        <td ng-click="doSort('fruit')">
+            <i>{{ sortDir('fruit') }}</i>
+            Fruit
+        </td>
+        <td ng-click="doSort('color')">
+            <i>{{ sortDir('color') }}</i>
+            Color
+        </td>
+        <td ng-click="doSort('number')">
+            <i>{{ sortDir('number') }}</i>
+            Number
+        </td>
+        <td ng-click="doSort('isHealthy')">
+            <i>{{ sortDir('isHealthy') }}</i>
+            Is healthy?
+        </td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="item in filteredItems() | orderBy: sortBy : reverseSort ">
+        <td>{{ item.fruit }}</td>
+        <td class="color-cell"
+            ng-style="{'background-color': item.color}"></td>
+        <td class="text-center">{{ item.number }}</td>
+        <td class="text-center">{{ isHealthyString(item.isHealthy) }}</td>
+    </tr>
+    <tr ng-if="!items.length">
+        <td colspan="4">Basket is empty.</td>
+    </tr>
+    </tbody>
+</table>

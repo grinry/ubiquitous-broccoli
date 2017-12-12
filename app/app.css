@@ -1,0 +1,75 @@
+/* app css stylesheet */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li + li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+table {
+    table-layout: auto;
+}
+table tr td {
+    padding: 3px 10px;
+}
+table td {
+    padding: 10px;
+}
+
+table thead tr td {
+    background-color: #b3d4fc;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+table tbody tr td {
+    border-bottom: 1px solid rgba(50, 188, 192, 0.1);
+}
+
+.text-right {
+    text-align: right;
+}
+.text-left {
+    text-align: left;
+}
+.text-center {
+    text-align: center;
+}
+
+.color-cell {
+    width: 80px;
+}
+
+input[type=search] {
+    width: 250px;
+    margin-bottom: 25px;
+}
+
+body {
+    padding: 15px;
+}
